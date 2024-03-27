@@ -12,7 +12,12 @@
             if (number <= 20) {
                 result = number * 200;
             } else {
-                result = (number - 20) * 10 + (number * 200);
+                var base = 20 * 200; // Base price for 20 players
+                var extra = 0;
+                for (var i = 21; i <= number; i++) {
+                    extra += (i - 20) * 10 + 200; // Adding 210, 220, 230, etc., for each player above 20
+                }
+                result = base + extra;
             }
             var teams_res = teams * 800
             var total = result + teams_res;
