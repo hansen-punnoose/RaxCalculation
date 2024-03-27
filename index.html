@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>MLB Cost of Rax Calculation Tool</title>
+    <title> MLB Cost of Rax Calculation Tool</title>
     <script>
         function calculate() {
             var number = parseInt(document.getElementById('number').value, 10);
@@ -14,21 +14,21 @@
             } else {
                 result = (number - 20) * 10 + (number * 200);
             }
-
+            var teams_res = teams * 800
             var total = result + teams;
-            document.getElementById('result').textContent = 'Calculation: ' + result + ', Total: ' + total;
+            document.getElementById('result').textContent =  'Total Rax: ' + total;
         }
     </script>
 </head>
 <body>
-    <h1>Calculation Tool</h1>
-    <label for="number">Number:</label>
+    <h1>MLB Rax Calculation Tool</h1>
+    <label for="number">Number of Players:</label>
     <input type="number" id="number" value="0">
     <br>
     <label for="teams">Number of Teams:</label>
     <input type="number" id="teams" value="0">
     <br>
     <button onclick="calculate()">Calculate</button>
-    <h2 id="result">Total: 0</h2>
+    <h2 id="result">Calculation: 0, Total: 0</h2>
 </body>
 </html>
